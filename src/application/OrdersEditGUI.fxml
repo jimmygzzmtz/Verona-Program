@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.OrdersEditController">
+   <children>
+      <Pane prefHeight="220.0" prefWidth="1280.0" style="-fx-background-color: red;">
+         <children>
+            <Text fill="WHITE" layoutX="27.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Verona">
+               <font>
+                  <Font size="92.0" />
+               </font>
+            </Text>
+            <Button fx:id="ordersEditHomeButton" layoutX="138.0" layoutY="162.0" mnemonicParsing="false" onAction="#ordersEditHomeClick" style="-fx-background-color: red;" text="Home">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="ordersEditNewSaleButton" layoutX="391.0" layoutY="162.0" mnemonicParsing="false" onAction="#ordersEditNewSaleClick" style="-fx-background-color: red;" text="New Sale">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="ordersEditOrdersButton" layoutX="705.0" layoutY="162.0" mnemonicParsing="false" onAction="#ordersEditOrdersClick" style="-fx-background-color: red;" text="Orders" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button fx:id="ordersEditProductButton" layoutX="962.0" layoutY="162.0" mnemonicParsing="false" onAction="#ordersEditProductsClick" style="-fx-background-color: red;" text="Products">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Pane layoutY="220.0" prefHeight="580.0" prefWidth="1280.0" style="-fx-background-color: white;">
+         <children>
+            <Circle fx:id="saveChangesOrdersCircle" fill="RED" layoutX="1199.0" layoutY="499.0" radius="67.0" stroke="RED" strokeType="INSIDE">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Circle>
+            <Button fx:id="saveChangesOrdersButton" layoutX="1137.0" layoutY="471.0" mnemonicParsing="false" onAction="#saveChangesOrdersClick" prefHeight="56.0" prefWidth="124.0" style="-fx-background-color: red;" text="Save" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <Text layoutX="542.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Editing">
+               <font>
+                  <Font size="64.0" />
+               </font>
+            </Text>
+            <Text layoutX="80.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text layoutX="80.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Size">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text layoutX="80.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Client">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text layoutX="80.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text layoutX="77.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text layoutX="78.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivered">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <TextField fx:id="clientTextField" layoutX="319.0" layoutY="262.0" prefHeight="39.0" prefWidth="882.0" />
+            <TextField fx:id="quantityTextField" layoutX="319.0" layoutY="381.0" prefHeight="39.0" prefWidth="882.0" />
+            <ComboBox fx:id="productCombo" layoutX="319.0" layoutY="136.0" prefHeight="39.0" prefWidth="452.0" promptText="Insert Product" />
+            <ComboBox fx:id="sizeCombo" layoutX="319.0" layoutY="196.0" prefHeight="39.0" prefWidth="452.0" promptText="Insert Size" />
+            <DatePicker fx:id="dateEntry" layoutX="319.0" layoutY="320.0" prefHeight="39.0" prefWidth="452.0" promptText="Insert Date" />
+            <ComboBox fx:id="yesNoCombo" layoutX="319.0" layoutY="436.0" prefHeight="39.0" prefWidth="452.0" promptText="Yes/No" />
+            <TextField fx:id="productTextField" layoutX="788.0" layoutY="136.0" prefHeight="39.0" prefWidth="416.0" />
+            <TextField fx:id="sizeTextField" layoutX="788.0" layoutY="196.0" prefHeight="39.0" prefWidth="416.0" />
+            <TextField fx:id="dateTextField" layoutX="788.0" layoutY="320.0" prefHeight="39.0" prefWidth="416.0" />
+            <TextField fx:id="deliveredTextField" layoutX="791.0" layoutY="436.0" prefHeight="39.0" prefWidth="323.0" />
+            <Text fx:id="warningText" fill="RED" layoutX="106.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="244.015625">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text layoutX="910.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saved Values">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Text>
+            <Text layoutX="465.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Values">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Text>
+         </children></Pane>
+   </children>
+</AnchorPane>

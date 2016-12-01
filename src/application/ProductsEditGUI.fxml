@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProductsEditController">
+   <children>
+      <Pane prefHeight="220.0" prefWidth="1280.0" style="-fx-background-color: red;">
+         <children>
+            <Text fill="WHITE" layoutX="27.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Verona">
+               <font>
+                  <Font size="92.0" />
+               </font>
+            </Text>
+            <Button fx:id="productsEditHomeButton" layoutX="138.0" layoutY="162.0" mnemonicParsing="false" onAction="#productsHomeClick" style="-fx-background-color: red;" text="Home">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="productsEditNewSaleButton" layoutX="391.0" layoutY="162.0" mnemonicParsing="false" onAction="#productsNewSaleClick" style="-fx-background-color: red;" text="New Sale">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="productsEditOrdersButton" layoutX="705.0" layoutY="162.0" mnemonicParsing="false" onAction="#productsOrdersClick" style="-fx-background-color: red;" text="Orders">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="productsEditProductButton" layoutX="962.0" layoutY="162.0" mnemonicParsing="false" onAction="#productsProductsClick" style="-fx-background-color: red;" text="Products" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutY="220.0" prefHeight="580.0" prefWidth="1280.0" style="-fx-background-color: white;">
+         <children>
+            <Text layoutX="542.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Editing">
+               <font>
+                  <Font size="64.0" />
+               </font>
+            </Text>
+            <Circle fx:id="saveChangesOrdersCircle" fill="RED" layoutX="1199.0" layoutY="499.0" radius="67.0" stroke="RED" strokeType="INSIDE">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Circle>
+            <Button fx:id="saveChangesProductsButton" layoutX="1137.0" layoutY="471.0" mnemonicParsing="false" onAction="#saveChangesProductsClick" prefHeight="56.0" prefWidth="124.0" style="-fx-background-color: red;" text="Save" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <Text layoutX="300.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cost">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text layoutX="300.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text layoutX="300.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <TextField fx:id="productCost" layoutX="478.0" layoutY="332.0" prefHeight="39.0" prefWidth="502.0" promptText="Product Cost" />
+            <TextField fx:id="productPrice" layoutX="478.0" layoutY="269.0" prefHeight="39.0" prefWidth="502.0" promptText="Product Price" />
+            <TextField fx:id="productEntry" layoutX="478.0" layoutY="206.0" prefHeight="39.0" prefWidth="502.0" promptText="Product Name" />
+            <Text fx:id="warningText" fill="RED" layoutX="877.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="321.015625">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+         </children></Pane>
+   </children>
+</AnchorPane>

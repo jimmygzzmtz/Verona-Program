@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+   <children>
+      <Pane prefHeight="220.0" prefWidth="1280.0" style="-fx-background-color: red;">
+         <children>
+            <Text fill="WHITE" layoutX="27.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Verona">
+               <font>
+                  <Font size="92.0" />
+               </font>
+            </Text>
+            <Button fx:id="homeButton" layoutX="138.0" layoutY="162.0" mnemonicParsing="false" onAction="#homeClick" style="-fx-background-color: red;" text="Home" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="newSaleButton" layoutX="391.0" layoutY="162.0" mnemonicParsing="false" onAction="#newSaleClick" style="-fx-background-color: red;" text="New Sale">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="ordersButton" layoutX="705.0" layoutY="162.0" mnemonicParsing="false" onAction="#ordersClick" style="-fx-background-color: red;" text="Orders">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button fx:id="productsButton" layoutX="962.0" layoutY="162.0" mnemonicParsing="false" onAction="#productsClick" style="-fx-background-color: red;" text="Products">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Pane layoutY="220.0" prefHeight="580.0" prefWidth="1280.0" style="-fx-background-color: white;">
+         <children>
+            <Circle fx:id="exitCircle" fill="RED" layoutX="1199.0" layoutY="499.0" radius="67.0" stroke="RED" strokeType="INSIDE">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Circle>
+            <Button fx:id="exitButton" layoutX="1137.0" layoutY="471.0" mnemonicParsing="false" onAction="#exitButtonClick" prefHeight="56.0" prefWidth="124.0" style="-fx-background-color: red;" text="Save &amp; Exit" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="512.0" fitWidth="540.0" layoutX="8.0" layoutY="34.0">
+               <image>
+                  <Image url="@images/veronalogo.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="revenueText" layoutX="960.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0.00">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Text fx:id="profitText" layoutX="960.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0.00">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="956.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Revenue">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text layoutX="953.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Profit">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <TableView fx:id="revenueprofitTable" layoutX="545.0" layoutY="34.0" prefHeight="512.0" prefWidth="404.0">
+              <columns>
+                <TableColumn fx:id="revenuecolumn" prefWidth="146.0" text="Revenue" />
+                <TableColumn fx:id="profitcolumn" prefWidth="126.0" text="Profit" />
+                  <TableColumn fx:id="datecolumn" prefWidth="131.0" text="Date" />
+              </columns>
+            </TableView>
+            <Circle fx:id="saveValuesCircle" fill="RED" layoutX="1018.0" layoutY="383.0" radius="58.0" stroke="RED" strokeType="INSIDE">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Circle>
+            <Button fx:id="saveValuesButton" layoutX="971.0" layoutY="355.0" mnemonicParsing="false" onAction="#saveValuesButtonClick" prefHeight="56.0" prefWidth="95.0" style="-fx-background-color: red;" text="Save Current" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Circle fx:id="resetTableCircle" fill="RED" layoutX="1018.0" layoutY="508.0" radius="58.0" stroke="RED" strokeType="INSIDE">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Circle>
+            <Button fx:id="resetTableButton" layoutX="971.0" layoutY="480.0" mnemonicParsing="false" onAction="#resetTableButtonClick" prefHeight="56.0" prefWidth="95.0" style="-fx-background-color: red;" text="Reset Table" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="953.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Profit">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text layoutX="953.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Revenue">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fx:id="totalRevenueText" layoutX="957.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0.00">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Text fx:id="totalProfitText" layoutX="960.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0.00">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+         </children></Pane>
+   </children>
+</AnchorPane>

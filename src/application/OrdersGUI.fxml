@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.OrdersController">
+   <children>
+      <Pane prefHeight="220.0" prefWidth="1280.0" style="-fx-background-color: red;">
+         <children>
+            <Text fill="WHITE" layoutX="27.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Verona">
+               <font>
+                  <Font size="92.0" />
+               </font>
+            </Text>
+            <Button fx:id="ordersHomeButton" layoutX="138.0" layoutY="162.0" mnemonicParsing="false" onAction="#ordersHomeClick" style="-fx-background-color: red;" text="Home">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="ordersNewSaleButton" layoutX="391.0" layoutY="162.0" mnemonicParsing="false" onAction="#ordersNewSaleClick" style="-fx-background-color: red;" text="New Sale">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="ordersOrdersButton" layoutX="705.0" layoutY="162.0" mnemonicParsing="false" onAction="#ordersOrdersClick" style="-fx-background-color: red;" text="Orders" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button fx:id="ordersProductButton" layoutX="962.0" layoutY="162.0" mnemonicParsing="false" onAction="#ordersProductsClick" style="-fx-background-color: red;" text="Products">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Pane layoutY="220.0" prefHeight="580.0" prefWidth="1280.0" style="-fx-background-color: white;">
+         <children>
+            <TableView fx:id="dataTable" layoutX="21.0" layoutY="40.0" prefHeight="515.0" prefWidth="1070.0">
+              <columns>
+                <TableColumn fx:id="product" prefWidth="226.0" text="Product" />
+                  <TableColumn fx:id="size" prefWidth="49.0" text="Size" />
+                <TableColumn fx:id="client" prefWidth="225.0" text="Client" />
+                  <TableColumn fx:id="date" prefWidth="220.0" text="Due Date" />
+                  <TableColumn fx:id="quantity" prefWidth="90.0" text="Quantity" />
+                  <TableColumn fx:id="paid" prefWidth="162.0" text="Paid" />
+                  <TableColumn fx:id="delivered" prefWidth="97.0" text="Delivered" />
+              </columns>
+            </TableView>
+            <Circle fx:id="deliveryCircle" fill="RED" layoutX="1199.0" layoutY="308.0" radius="67.0" stroke="RED" strokeType="INSIDE">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Circle>
+            <Button fx:id="deliveryChangeButton" layoutX="1137.0" layoutY="280.0" mnemonicParsing="false" onAction="#deliveryChangeButtonClick" prefHeight="56.0" prefWidth="124.0" style="-fx-background-color: red;" text="Change to delivered" textFill="WHITE">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Circle fx:id="deleteDeliveredCircle" fill="RED" layoutX="1199.0" layoutY="499.0" radius="67.0" stroke="RED" strokeType="INSIDE">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Circle>
+            <Button fx:id="deleteDeliveredButton" layoutX="1137.0" layoutY="471.0" mnemonicParsing="false" onAction="#deleteDeliveredButtonClick" prefHeight="56.0" prefWidth="124.0" style="-fx-background-color: red;" text="Delete Delivered" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="clientNameDelivered" layoutX="1127.0" layoutY="163.0" prefHeight="70.0" prefWidth="144.0" promptText="Name of Client" />
+            <Circle fx:id="editLineCircle" fill="RED" layoutX="1199.0" layoutY="81.0" radius="67.0" stroke="RED" strokeType="INSIDE">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Circle>
+            <Button fx:id="editLineButton" layoutX="1137.0" layoutY="53.0" mnemonicParsing="false" onAction="#editLineButtonClick" prefHeight="56.0" prefWidth="124.0" style="-fx-background-color: red;" text="Edit Selected Line" textFill="WHITE">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Text fx:id="warningText" fill="RED" layoutX="306.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="376.015625">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Button fx:id="deleteLineButton" layoutX="1137.0" layoutY="388.0" mnemonicParsing="false" onAction="#deleteLineButtonClick" prefHeight="27.0" prefWidth="124.0" style="-fx-background-color: red;" text="Delete Row" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children></Pane>
+   </children>
+</AnchorPane>
